@@ -2,7 +2,7 @@
 
 Script to convert the tracklist of a given NTS radio show into a Spotify playlist on the account of the user that is logged in (using oauth2). Frontend using FastApi, Backend using Spotipy and BeautifulSoup.
 
-<img src="/static/nts2sp.jpg width="100">
+<img src="/static/nts2sp.jpg" width="150"/>
 
 ## Installation
 Install the requirements (BeautifulSoup, Spotipy, FastApi etc.) by using pip.
