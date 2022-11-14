@@ -27,10 +27,14 @@ config = {
 On the [dashboard of the Spotify for developers site](https://developer.spotify.com/dashboard/), make a new app and copy the *client_id* and *client_secret* to the *config.py* file and add the *redirect_uri* to the app settings (and don't forget to save them). Generate a random key to use for the session and paste it into the same file for the *session_middleware_key*.
 
 ## Usage
-Launch the application by using following command:
+Launch the application by using one of the following commands:
 
 ```bash
 uvicorn main:app
+```
+
+```bash
+python3 main.py
 ```
 
 Access the site by browsing to *localhost:8000* in your browser. Paste the url of your favorite [NTS show](https://www.nts.live/shows/) and enjoy your fresh Spotify playlist!
