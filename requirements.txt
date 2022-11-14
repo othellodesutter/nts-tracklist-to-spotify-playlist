@@ -6,3 +6,5 @@ Pillow==9.2.0
 requests==2.26.0
 spotipy==2.16.1
 starlette==0.19.1
+itsdangerous
+

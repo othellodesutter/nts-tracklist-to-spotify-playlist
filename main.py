@@ -65,7 +65,7 @@ async def query(request: Request):
     if access_token is None:
         return templates.TemplateResponse('index.html', {'request': request})
     
-    if auth.check_if_token_is_expired():
+    if auth.check_if_token_is_expired:
         access_token = auth.refresh_token(config, refresh_token)
         request.session['access_token'] = access_token
 
@@ -74,3 +74,7 @@ async def query(request: Request):
     status_message = script.create_new_spotify_playlist_and_add_tracks(url, access_token)
 
     return templates.TemplateResponse('query.html', {'request': request, 'message': status_message})
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
