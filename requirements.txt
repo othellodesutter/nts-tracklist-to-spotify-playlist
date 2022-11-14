@@ -1,5 +1,5 @@
 beautifulsoup4==4.11.1
-Django==4.0
+Django==4.0.8
 fastapi==0.79.1
 fuzzywuzzy==0.18.0
 Pillow==9.2.0
