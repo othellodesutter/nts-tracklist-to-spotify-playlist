@@ -23,7 +23,7 @@ def home(request: Request):
 @app.get("/login")
 def login(request: Request):
     access_token = request.session.get("access_token")
-    refresh_token = request.session.get("refresh_token")
+    #refresh_token = request.session.get("refresh_token")
     callback_url = auth.spotify_auth(config)
     if access_token is None:
         return RedirectResponse(callback_url, status_code=status.HTTP_303_SEE_OTHER)    

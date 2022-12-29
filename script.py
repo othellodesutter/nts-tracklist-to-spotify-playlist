@@ -86,7 +86,7 @@ def choose_best_corresponding_track(query_track, query_artist, spotify_tracks):
 
         ratio_title = fuzz.token_set_ratio(query_track, item['name'])
         ratio_artist = fuzz.token_set_ratio(query_artist, spotify_artists)
-        score = fuzz.ratio(track, item['name'] + ' - ' + spotify_artists)
+        score = fuzz.ratio(track.lower(), item['name'].lower() + ' - ' + spotify_artists.lower())
 
         print('SPT: ' + str(ratio_title) + ' ' + str(ratio_artist) + ' ' + str(score) + '% ' + item['name'] + ' - ' + str(spotify_artists))
         list_of_scores.append({'track': item, 'score': score, 'ratio_title': ratio_title, 'ratio_artist': ratio_artist})
