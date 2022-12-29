@@ -10,3 +10,4 @@ itsdangerous
 python-Levenshtein
 jinja2
 uvicorn
+python-multipart
